@@ -1,7 +1,7 @@
 <h1>Live Weather Data</h1>
 <table border="1" id="weather-table">
     <thead>
-        <tr><th>ID</th><th>Temp (°C)</th><th>Humidity (%)</th><th>Pressure (hPa)</th><th>Time</th></tr>
+        <tr><th>Temp (°C)</th><th>Humidity (%)</th><th>Pressure (hPa)</th><th>Time</th></tr>
     </thead>
     <tbody></tbody>
 </table>
@@ -16,7 +16,7 @@ function loadWeather() {
             data.forEach(row => {
                 const tr = document.createElement("tr");
                 tr.innerHTML = `
-                    <td>${row.id}</td>
+                    
                     <td>${row.temperature}</td>
                     <td>${row.humidity}</td>
                     <td>${row.pressure}</td>
