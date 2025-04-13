@@ -5,6 +5,8 @@
     </thead>
     <tbody></tbody>
 </table>
+<h2>Temperature Graph</h2>
+<img src="graph.png?<?php echo time(); ?>" width="600" />
 
 <script>
 function loadWeather() {
@@ -29,4 +31,10 @@ function loadWeather() {
 
 loadWeather();                   
 setInterval(loadWeather, 5000); 
+
+setInterval(() => {
+    const img = document.querySelector("img");
+    const ts = new Date().getTime();
+    img.src = `graph.png?${ts}`;
+}, 30 * 1000);
 </script>

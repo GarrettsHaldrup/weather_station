@@ -7,6 +7,4 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 COPY . .
 
-ENV PYTHONPATH=/app
-
-CMD ["python", "collector.py"]
+CMD ["python", "generate_graphs.py"]
