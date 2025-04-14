@@ -2,3 +2,5 @@ db_data/
 
 .DS_Store
 .vscode
+website/graph*.png
+website/range.txt

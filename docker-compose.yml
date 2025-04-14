@@ -29,6 +29,7 @@ services:
       MYSQL_DATABASE: weatherdb
       MYSQL_USER: weatheruser
       MYSQL_PASSWORD: "1234"
+      TZ: America/New_York
     volumes:
       - db_data:/var/lib/mysql
       - ./db-init:/docker-entrypoint-initdb.d
@@ -41,6 +42,8 @@ services:
     depends_on:
       - db
     restart: unless-stopped
+    volumes:
+      - ./scripts:/app/scripts
 
 volumes:
   db_data:

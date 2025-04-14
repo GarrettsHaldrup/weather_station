@@ -1,32 +1,29 @@
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="js/main.js"></script>
+<link rel="stylesheet" href="style.css">
+
 <h1>Live Weather Data</h1>
+<form id="range-form">
+  <label for="start">Start:</label>
+  <input type="datetime-local" id="start">
+
+  <label for="end">End:</label>
+  <input type="datetime-local" id="end">
+
+  <button type="button" id="range-submit">Apply</button>
+</form>
+
 <table border="1" id="weather-table">
     <thead>
         <tr><th>Temp (°C)</th><th>Humidity (%)</th><th>Pressure (hPa)</th><th>Time</th></tr>
     </thead>
     <tbody></tbody>
 </table>
-
-<script>
-function loadWeather() {
-    fetch('weather_data.php')
-        .then(res => res.json())
-        .then(data => {
-            const tbody = document.querySelector("#weather-table tbody");
-            tbody.innerHTML = "";
-            data.forEach(row => {
-                const tr = document.createElement("tr");
-                tr.innerHTML = `
-                    
-                    <td>${row.temperature}</td>
-                    <td>${row.humidity}</td>
-                    <td>${row.pressure}</td>
-                    <td>${row.recorded_at}</td>
-                `;
-                tbody.appendChild(tr);
-            });
-        });
-}
-
-loadWeather();                   
-setInterval(loadWeather, 5000); 
-</script>
+<div>
+    <h2>Temperature</h2>
+    <canvas id="tempChart" height="100"></canvas>
+    <h2>Humidity</h2>
+    <canvas id="humidityChart" height="100"></canvas>
+    <h2>Temperature</h2>
+    <canvas id="pressureChart" height="100"></canvas>
+</div<
