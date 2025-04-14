@@ -1,20 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
     let tempChart, humidityChart, pressureChart;
 
-    // Changeing time from udt to est
-    function convertTime(time) {
-        const date = new Date(time);
-        return date.toLocaleString("en-US", {
-            timeZone: "America/New_York",
-            year: "numeric",
-            month: "short",
-            day: "numeric",
-            hour: "2-digit",
-            minute: "2-digit",
-            second: "2-digit",
-            hour12: false   
-        });
-    }
 
     function getRange() {
         return {
