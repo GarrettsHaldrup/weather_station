@@ -7,3 +7,6 @@ CREATE TABLE IF NOT EXISTS weather_data (
     pressure FLOAT,
     recorded_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
+
+SET GLOBAL time_zone = 'America/New_York';
+SET time_zone = 'America/New_York';
