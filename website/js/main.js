@@ -67,7 +67,8 @@ document.addEventListener("DOMContentLoaded", () => {
         setChartFn(chart);
     }
 
-    document.getElementById("range-submit").addEventListener("click", update());
+    document.getElementById("range-submit").addEventListener("click", update);
+    
     
     // Initial Loading of Page
     const now_udt = new Date();
