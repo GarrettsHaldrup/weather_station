@@ -1,4 +1,6 @@
-# Dockerfile.php
+# PHP container setup file
+# Author: Garrett Haldrup
+# Description: Install php and all dependencies
 FROM arm64v8/php:8.2-fpm
 
 ENV TZ=America/New_York

@@ -1,3 +1,6 @@
+# Docker Compose File for Docker Setup
+# Author: Garrett Haldrup
+# Description: Set up all containers with all required build configuration
 
 services:
   nginx:
@@ -39,11 +42,21 @@ services:
 
   collector:
     build: ./collector
+    privileged: true
     depends_on:
       - db
     restart: unless-stopped
     volumes:
       - ./scripts:/app/scripts
+      - /sys/class/gpio:/sys/class/gpio
+      - /dev:/dev
+    devices:
+      - /dev/gpiochip0
+      - /dev/gpiochip4
+      - /dev/gpiochip10
+      - /dev/gpiochip11
+      - /dev/gpiochip12
+      - /dev/gpiochip13
 
 volumes:
   db_data:

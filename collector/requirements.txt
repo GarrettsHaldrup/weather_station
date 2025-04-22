@@ -1,1 +1,4 @@
 mysql-connector-python
+gpiozero
+adafruit-circuitpython-dht
+adafruit-circuitpython-bmp280

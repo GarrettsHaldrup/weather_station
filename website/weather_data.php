@@ -1,4 +1,9 @@
 <?php
+# Data Grabber for website
+# Author: Garrett Haldrup
+# Description: Takes times as input and returns all values from database within those times
+
+
 $host = 'db';
 $db   = 'weatherdb';
 $user = 'weatheruser';
@@ -19,7 +24,7 @@ if (!$start || !$end) {
 try {
     $pdo = new PDO($dsn, $user, $pass);
     $stmt = $pdo->prepare("
-        SELECT * FROM weather_data
+        SELECT temperature, humidity, pressure, wind_speed, recorded_at FROM weather_data
         WHERE recorded_at BETWEEN :start AND :end 
         ORDER BY recorded_at DESC
     ");
