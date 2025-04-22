@@ -43,6 +43,6 @@ View collector.py is the final endpoint that sends data to be upload to database
 Look at test_data.py to see how data is exported to the collector
 
 ## TODO
-1. Get Sensors Working (Zach, Garrett)
+1. ~~Get Sensors Working (Zach, Garrett)~~
 2. ~~Add Graph to website (Garrett)~~
-3. Make website pretty (Garrett)
+3. ~~Make website pretty (Garrett)~~
