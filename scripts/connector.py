@@ -1,3 +1,7 @@
+# Python script for connecting to Database
+# Author: Garrett Haldrup
+# Description: Connects to the database using the credentials, orginally so multiple scripts could use
+
 import mysql.connector
 from time import sleep
 def connect_to_db():

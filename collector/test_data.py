@@ -1,3 +1,7 @@
+# Test Data
+# Author: Garrett Haldrup
+# Description: Generate Random data to test databsae and website before sensors
+
 from random import uniform
 
 def get_fake_weather():
