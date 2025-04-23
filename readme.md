@@ -20,6 +20,13 @@ docker composer up -d --build
 http://YOUR_PI_IP
 ```
 
+## Conections
+### DHT-11
+![DHT Pinout Diagram](dht.png)
+### BMP280
+![BMP Pinout Diagram](bmp.png)
+### Reed Switch
+![Reed Switch Diagram](rs.png)
 ## Developent
 ### Usefull Docker Commands
 ```bash
